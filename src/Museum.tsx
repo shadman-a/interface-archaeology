@@ -12,7 +12,7 @@ type Artifact = {
   replacedBy: string;
   gained: string;
   lost: string;
-  visual: "sim" | "apple-sim" | "tivo" | "metrocard" | "projector" | "ipod" | "led" | "signature";
+  visual: "sim" | "apple-sim" | "tivo" | "metrocard" | "projector" | "ipod" | "led" | "signature" | "software-box";
 };
 
 const artifacts: Artifact[] = [
@@ -136,6 +136,21 @@ const artifacts: Artifact[] = [
     lost: "Nothing of consequence",
     visual: "signature",
   },
+  {
+    id: "big-box-software",
+    index: "009",
+    name: "The Software Box",
+    years: "1984—2012",
+    category: "Object",
+    status: "Extinct",
+    epitaph: "Code used to arrive with weight.",
+    description:
+      "Before apps materialized from a cloud, software arrived as an oversized retail object: shrink-wrapped cardboard, a jewel case, a manual, and enough empty space to look expensive.",
+    replacedBy: "App stores and direct downloads",
+    gained: "Instant delivery, automatic updates, no shelf space",
+    lost: "Manuals, ownership, and the thrill of carrying code home",
+    visual: "software-box",
+  },
 ];
 
 const filters = ["All", "Object", "Interface", "Ritual"] as const;
@@ -207,6 +222,15 @@ function ArtifactVisual({ type }: { type: Artifact["visual"] }) {
           <strong>Senior Global Vice President</strong>
           <small>♻ Please consider the environment before printing this email.</small>
         </div>
+      )}
+      {type === "software-box" && (
+        <figure className="software-box-photo">
+          <img
+            src="./artifacts/big-box-software.webp"
+            alt=""
+            loading="lazy"
+          />
+        </figure>
       )}
     </div>
   );

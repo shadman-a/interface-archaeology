@@ -8,7 +8,7 @@ Products rarely disappear all at once. First, a button becomes a gesture. A card
 
 ## On view
 
-The first exhibition contains eight recently departed artifacts:
+The first exhibition contains nine recently departed artifacts:
 
 - The removable SIM
 - Apple SIM
@@ -18,6 +18,7 @@ The first exhibition contains eight recently departed artifacts:
 - The iPod click wheel
 - The notification LED
 - The corporate email signature
+- The big-box software package
 
 Each exhibit records what replaced the artifact, what improved, and what quietly disappeared with it.
 

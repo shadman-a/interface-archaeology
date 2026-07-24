@@ -410,6 +410,25 @@ button {
   transition: transform .45s cubic-bezier(.2,.8,.2,1);
 }
 
+.software-box-photo {
+  background: #e9dfcc;
+  box-shadow: 0 22px 45px rgba(17, 17, 15, .14);
+  height: 310px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  transform: rotate(1.5deg);
+  width: 310px;
+  z-index: 1;
+}
+
+.software-box-photo img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .sim-family {
   align-items: end;
   display: flex;
@@ -1083,6 +1102,11 @@ footer p {
   .specimen::before {
     height: min(74vw, 280px);
     width: min(74vw, 280px);
+  }
+
+  .software-box-photo {
+    height: min(78vw, 300px);
+    width: min(78vw, 300px);
   }
 
   .projector-scene {
