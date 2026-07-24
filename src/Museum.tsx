@@ -332,20 +332,18 @@ export default function Museum() {
                   </div>
                   <span className="expand-label">{isOpen ? "Close" : "Examine"} {isOpen ? "×" : "+"}</span>
                 </button>
-                <div
-                  className="artifact-details"
-                  id={`${artifact.id}-details`}
-                  aria-hidden={!isOpen}
-                >
-                  <div className="artifact-details-inner">
-                    <p>{artifact.description}</p>
-                    <dl>
-                      <div><dt>Replaced by</dt><dd>{artifact.replacedBy}</dd></div>
-                      <div><dt>What we gained</dt><dd>{artifact.gained}</dd></div>
-                      <div><dt>What we lost</dt><dd>{artifact.lost}</dd></div>
-                    </dl>
+                {isOpen && (
+                  <div className="artifact-details" id={`${artifact.id}-details`}>
+                    <div className="artifact-details-inner">
+                      <p>{artifact.description}</p>
+                      <dl>
+                        <div><dt>Replaced by</dt><dd>{artifact.replacedBy}</dd></div>
+                        <div><dt>What we gained</dt><dd>{artifact.gained}</dd></div>
+                        <div><dt>What we lost</dt><dd>{artifact.lost}</dd></div>
+                      </dl>
+                    </div>
                   </div>
-                </div>
+                )}
               </article>
             );
           })}

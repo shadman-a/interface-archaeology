@@ -830,11 +830,10 @@ button {
 }
 
 .artifact-details {
-  display: grid;
-  grid-template-rows: 0fr;
+  animation: details-in .32s ease both;
+  border-top: 1px solid var(--line);
   overflow: hidden;
-  padding: 0 24px;
-  transition: grid-template-rows .5s ease, padding .5s ease;
+  padding: 30px 24px 38px;
 }
 
 .artifact-details-inner {
@@ -845,10 +844,11 @@ button {
   overflow: hidden;
 }
 
-.artifact-card.is-open .artifact-details {
-  border-top: 1px solid var(--line);
-  grid-template-rows: 1fr;
-  padding: 30px 24px 38px;
+@keyframes details-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 }
 
 .artifact-details-inner > p {
@@ -1102,7 +1102,7 @@ footer p {
     right: 0;
   }
 
-  .artifact-card.is-open .artifact-details {
+  .artifact-details {
     padding: 26px 0 34px;
   }
 
@@ -1203,5 +1203,6 @@ footer p {
   html { scroll-behavior: auto; }
   .orbit-dot,
   .led-light { animation: none; }
+  .artifact-details { animation: none; }
   .specimen > * { transition: none; }
 }
