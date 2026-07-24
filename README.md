@@ -11,7 +11,7 @@ Products rarely disappear all at once. First, a button becomes a gesture. A card
 The first exhibition contains nine recently departed artifacts:
 
 - The removable SIM
-- Apple SIM
+- The screensaver
 - The TiVo grid
 - The 59th/63rd Street secret transfer
 - The airplane cabin projector

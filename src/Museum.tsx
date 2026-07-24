@@ -12,7 +12,7 @@ type Artifact = {
   replacedBy: string;
   gained: string;
   lost: string;
-  visual: "sim" | "apple-sim" | "tivo" | "metrocard" | "projector" | "ipod" | "led" | "signature" | "software-box";
+  visual: "sim" | "screensaver" | "tivo" | "metrocard" | "projector" | "ipod" | "led" | "signature" | "software-box";
 };
 
 const artifacts: Artifact[] = [
@@ -32,19 +32,19 @@ const artifacts: Artifact[] = [
     visual: "sim",
   },
   {
-    id: "apple-sim",
+    id: "screensaver",
     index: "002",
-    name: "Apple SIM",
-    years: "2014—2022",
+    name: "The Screensaver",
+    years: "1991—2015",
     category: "Interface",
-    status: "Extinct",
-    epitaph: "eSIM, before anyone was ready to call it that.",
+    status: "Transformed",
+    epitaph: "A computer dreaming while you were gone.",
     description:
-      "A programmable physical SIM that let iPad owners choose a carrier in Settings. It briefly exposed the absurdity of treating network access like a permanent hardware decision.",
-    replacedBy: "Embedded eSIM",
-    gained: "No card at all",
-    lost: "A visible transitional object",
-    visual: "apple-sim",
+      "It protected phosphor from burn-in, then became a tiny stage for flying objects, family photos, and questionable office personality. Now the lock screen has a job to do.",
+    replacedBy: "Lock screens and sleeping displays",
+    gained: "Security, battery life, useful information",
+    lost: "A private little show after everyone left",
+    visual: "screensaver",
   },
   {
     id: "tivo-grid",
@@ -165,13 +165,16 @@ function ArtifactVisual({ type }: { type: Artifact["visual"] }) {
           <span className="sim-card sim-card--nano">NANO</span>
         </div>
       )}
-      {type === "apple-sim" && (
-        <div className="apple-sim-card">
-          <svg className="apple-mark" viewBox="0 0 34 38" role="presentation">
-            <path d="M22.9 6.4c1.5-1.8 1.4-3.8 1.3-4.4-1.6.1-3.4 1.1-4.4 2.3-.9 1-1.7 2.7-1.5 4.3 1.7.1 3.3-.8 4.6-2.2ZM28.8 20.1c0-4.5 3.7-6.6 3.9-6.7-2.1-3.1-5.4-3.5-6.6-3.6-2.8-.3-5.4 1.6-6.8 1.6-1.4 0-3.6-1.5-5.9-1.5-3.1.1-5.9 1.8-7.5 4.6-3.2 5.6-.8 13.9 2.3 18.4 1.5 2.2 3.4 4.7 5.8 4.6 2.3-.1 3.2-1.5 6-1.5 2.8 0 3.6 1.5 6 1.4 2.5 0 4-2.2 5.5-4.5 1.8-2.6 2.5-5.1 2.6-5.2-.1 0-5.3-2-5.3-7.6Z" />
-          </svg>
-          <span>Apple SIM</span>
-          <small>UNIVERSAL</small>
+      {type === "screensaver" && (
+        <div className="screensaver">
+          <div className="screensaver-screen">
+            <i className="screensaver-ribbon screensaver-ribbon--red" />
+            <i className="screensaver-ribbon screensaver-ribbon--blue" />
+            <i className="screensaver-ribbon screensaver-ribbon--cream" />
+            <span>ZZZ</span>
+          </div>
+          <div className="screensaver-neck" />
+          <div className="screensaver-base" />
         </div>
       )}
       {type === "tivo" && (
