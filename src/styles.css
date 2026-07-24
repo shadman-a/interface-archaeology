@@ -837,19 +837,21 @@ button {
   transition: grid-template-rows .5s ease, padding .5s ease;
 }
 
-.artifact-details > * {
+.artifact-details-inner {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1.4fr 1fr;
   min-height: 0;
+  overflow: hidden;
 }
 
 .artifact-card.is-open .artifact-details {
   border-top: 1px solid var(--line);
-  gap: 40px;
-  grid-template-columns: 1.4fr 1fr;
   grid-template-rows: 1fr;
   padding: 30px 24px 38px;
 }
 
-.artifact-details > p {
+.artifact-details-inner > p {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 19px;
   line-height: 1.35;
@@ -1101,9 +1103,12 @@ footer p {
   }
 
   .artifact-card.is-open .artifact-details {
+    padding: 26px 0 34px;
+  }
+
+  .artifact-details-inner {
     gap: 28px;
     grid-template-columns: 1fr;
-    padding: 26px 0 34px;
   }
 
   .submit-strip {
