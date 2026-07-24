@@ -288,8 +288,6 @@ export default function Museum() {
           <span className="orbit orbit--one" />
           <span className="orbit orbit--two" />
           <span className="orbit-dot" />
-          <b>1991</b>
-          <strong>2026</strong>
         </div>
       </section>
 
