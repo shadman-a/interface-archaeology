@@ -2,6 +2,8 @@
 
 An interactive museum of the interfaces, objects, and tiny rituals that technology left behind.
 
+**[Visit the live museum →](https://shadman-a.github.io/interface-archaeology/)**
+
 Products rarely disappear all at once. First, a button becomes a gesture. A card becomes a setting. A familiar sound becomes silent background infrastructure. **Interface Archaeology** documents those transitions and asks whether the replacement was actually better.
 
 ## On view

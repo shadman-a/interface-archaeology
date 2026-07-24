@@ -152,8 +152,11 @@ function ArtifactVisual({ type }: { type: Artifact["visual"] }) {
       )}
       {type === "apple-sim" && (
         <div className="apple-sim-card">
-          <span className="apple-mark">●</span>
+          <svg className="apple-mark" viewBox="0 0 34 38" role="presentation">
+            <path d="M22.9 6.4c1.5-1.8 1.4-3.8 1.3-4.4-1.6.1-3.4 1.1-4.4 2.3-.9 1-1.7 2.7-1.5 4.3 1.7.1 3.3-.8 4.6-2.2ZM28.8 20.1c0-4.5 3.7-6.6 3.9-6.7-2.1-3.1-5.4-3.5-6.6-3.6-2.8-.3-5.4 1.6-6.8 1.6-1.4 0-3.6-1.5-5.9-1.5-3.1.1-5.9 1.8-7.5 4.6-3.2 5.6-.8 13.9 2.3 18.4 1.5 2.2 3.4 4.7 5.8 4.6 2.3-.1 3.2-1.5 6-1.5 2.8 0 3.6 1.5 6 1.4 2.5 0 4-2.2 5.5-4.5 1.8-2.6 2.5-5.1 2.6-5.2-.1 0-5.3-2-5.3-7.6Z" />
+          </svg>
           <span>Apple SIM</span>
+          <small>UNIVERSAL</small>
         </div>
       )}
       {type === "tivo" && (
@@ -164,16 +167,23 @@ function ArtifactVisual({ type }: { type: Artifact["visual"] }) {
       )}
       {type === "metrocard" && (
         <div className="metro-card">
-          <span className="metro-m">M</span>
-          <span>METROCARD</span>
+          <i className="metro-stripe" />
+          <span className="metro-m">MTA</span>
+          <strong>MetroCard</strong>
           <b>FREE TRANSFER</b>
         </div>
       )}
       {type === "projector" && (
         <div className="projector-scene">
-          <div className="projector-box"><span /></div>
+          <div className="projector-box">
+            <i /><i />
+            <span />
+          </div>
           <div className="light-beam" />
-          <div className="movie-screen">FEATURE PRESENTATION</div>
+          <div className="movie-screen">
+            <span>FEATURE</span>
+            <b>PRESENTATION</b>
+          </div>
         </div>
       )}
       {type === "ipod" && (
@@ -304,6 +314,7 @@ export default function Museum() {
                   className="artifact-trigger"
                   type="button"
                   aria-expanded={isOpen}
+                  aria-controls={`${artifact.id}-details`}
                   onClick={() => setOpenId(isOpen ? null : artifact.id)}
                 >
                   <div className="artifact-topline">
@@ -321,7 +332,7 @@ export default function Museum() {
                   </div>
                   <span className="expand-label">{isOpen ? "Close" : "Examine"} {isOpen ? "×" : "+"}</span>
                 </button>
-                <div className="artifact-details">
+                <div className="artifact-details" id={`${artifact.id}-details`}>
                   <p>{artifact.description}</p>
                   <dl>
                     <div><dt>Replaced by</dt><dd>{artifact.replacedBy}</dd></div>
