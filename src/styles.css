@@ -422,157 +422,35 @@ button {
   display: grid;
   gap: 14px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: 610px;
+  max-width: 650px;
   position: relative;
   transform: rotate(-1deg);
-  width: 94%;
+  width: 96%;
   z-index: 1;
 }
 
-.starter-window {
-  background: #f7f7f5;
+.framework-capture {
+  align-items: center;
+  background: white;
   border: 1px solid rgba(17, 17, 15, .48);
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: 0 18px 30px rgba(17, 17, 15, .13);
-  height: 220px;
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  margin: 0;
   overflow: hidden;
 }
 
-.starter-toolbar {
-  align-items: center;
-  background: #deddd8;
-  border-bottom: 1px solid rgba(17, 17, 15, .2);
-  display: flex;
-  gap: 4px;
-  height: 25px;
-  padding: 0 8px;
-}
-
-.starter-toolbar i {
-  background: #aaa8a1;
-  border-radius: 50%;
+.framework-capture img {
   display: block;
-  height: 5px;
-  width: 5px;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
-.starter-toolbar i:first-child {
-  background: var(--red);
-}
-
-.starter-toolbar span {
-  color: #6d6b66;
-  font-family: "Courier New", monospace;
-  font-size: 6px;
-  margin-left: 5px;
-}
-
-.rails-welcome {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - 25px);
-  justify-content: center;
-  padding: 16px;
-  text-align: center;
-}
-
-.rails-welcome b {
-  color: #c3131d;
-  font-family: Georgia, serif;
-  font-size: 22px;
-  font-style: italic;
-  letter-spacing: -.08em;
-  line-height: 1;
-}
-
-.rails-welcome strong {
-  border-bottom: 2px solid #c3131d;
-  font-family: Georgia, serif;
-  font-size: 17px;
-  font-weight: 400;
-  margin-top: 14px;
-  padding-bottom: 4px;
-}
-
-.rails-welcome span {
-  font-size: 7px;
-  margin-top: 8px;
-}
-
-.rails-welcome small {
-  color: #a20f17;
-  font-size: 5px;
-  margin-top: 18px;
-  text-decoration: underline;
-}
-
-.starter-window--react {
-  background: #282c34;
-}
-
-.starter-window--react .starter-toolbar {
-  background: #20232a;
-  border-color: rgba(255, 255, 255, .12);
-}
-
-.starter-window--react .starter-toolbar span {
-  color: #8f949d;
-}
-
-.react-welcome {
-  align-items: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - 25px);
-  justify-content: center;
-  text-align: center;
-}
-
-.react-mark {
-  height: 74px;
-  position: relative;
-  width: 88px;
-}
-
-.react-mark i {
-  border: 3px solid #61dafb;
-  border-radius: 50%;
-  height: 28px;
-  left: 4px;
-  position: absolute;
-  top: 23px;
-  width: 80px;
-}
-
-.react-mark i:nth-child(2) {
-  transform: rotate(60deg);
-}
-
-.react-mark i:nth-child(3) {
-  transform: rotate(-60deg);
-}
-
-.react-mark em {
-  background: #61dafb;
-  border-radius: 50%;
-  height: 11px;
-  left: 39px;
-  position: absolute;
-  top: 31px;
-  width: 11px;
-}
-
-.react-welcome > span {
-  font-size: 7px;
-  margin-top: 8px;
-}
-
-.react-welcome > small {
-  color: #61dafb;
-  font-size: 7px;
-  margin-top: 12px;
+.framework-capture--react {
+  background: #000;
 }
 
 .sim-family {
@@ -1333,20 +1211,8 @@ footer p {
     width: 100%;
   }
 
-  .starter-window {
+  .framework-capture {
     height: 185px;
-  }
-
-  .rails-welcome strong {
-    font-size: 13px;
-  }
-
-  .rails-welcome small {
-    margin-top: 12px;
-  }
-
-  .react-mark {
-    transform: scale(.78);
   }
 
   .projector-scene {
