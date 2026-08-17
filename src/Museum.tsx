@@ -276,13 +276,14 @@ export default function Museum() {
   const [activeFilter, setActiveFilter] = useState<(typeof filters)[number]>("All");
   const [openId, setOpenId] = useState<string | null>(null);
 
-  const visibleArtifacts = useMemo(
-    () =>
+  const visibleArtifacts = useMemo(() => {
+    const filteredArtifacts =
       activeFilter === "All"
         ? artifacts
-        : artifacts.filter((artifact) => artifact.category === activeFilter),
-    [activeFilter],
-  );
+        : artifacts.filter((artifact) => artifact.category === activeFilter);
+
+    return [...filteredArtifacts].reverse();
+  }, [activeFilter]);
 
   return (
     <main>
