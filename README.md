@@ -8,7 +8,7 @@ Products rarely disappear all at once. First, a button becomes a gesture. A card
 
 ## On view
 
-The first exhibition contains nine recently departed artifacts:
+The first exhibition contains ten recently departed artifacts:
 
 - The removable SIM
 - The screensaver
@@ -19,6 +19,7 @@ The first exhibition contains nine recently departed artifacts:
 - The notification LED
 - The corporate email signature
 - The big-box software package
+- The framework welcome screen
 
 Each exhibit records what replaced the artifact, what improved, and what quietly disappeared with it.
 
