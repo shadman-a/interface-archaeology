@@ -252,31 +252,20 @@ function ArtifactVisual({ type }: { type: Artifact["visual"] }) {
       )}
       {type === "framework-welcome" && (
         <div className="framework-welcome">
-          <div className="starter-window starter-window--rails">
-            <div className="starter-toolbar">
-              <i /><i /><i />
-              <span>localhost:3000</span>
-            </div>
-            <div className="rails-welcome">
-              <b>RAILS</b>
-              <strong>Welcome aboard</strong>
-              <span>You're riding Ruby on Rails!</span>
-              <small>About your application's environment</small>
-            </div>
-          </div>
-          <div className="starter-window starter-window--react">
-            <div className="starter-toolbar">
-              <i /><i /><i />
-              <span>localhost:3000</span>
-            </div>
-            <div className="react-welcome">
-              <div className="react-mark">
-                <i /><i /><i /><em />
-              </div>
-              <span>Edit <b>src/App.js</b> and save to reload.</span>
-              <small>Learn React</small>
-            </div>
-          </div>
+          <figure className="framework-capture framework-capture--rails">
+            <img
+              src="./artifacts/rails-welcome.png"
+              alt=""
+              loading="lazy"
+            />
+          </figure>
+          <figure className="framework-capture framework-capture--react">
+            <img
+              src="./artifacts/create-react-app-welcome.gif"
+              alt=""
+              loading="lazy"
+            />
+          </figure>
         </div>
       )}
     </div>
