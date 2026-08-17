@@ -12,7 +12,7 @@ type Artifact = {
   replacedBy: string;
   gained: string;
   lost: string;
-  visual: "sim" | "screensaver" | "tivo" | "metrocard" | "projector" | "ipod" | "led" | "signature" | "software-box";
+  visual: "sim" | "screensaver" | "tivo" | "metrocard" | "projector" | "ipod" | "led" | "signature" | "software-box" | "framework-welcome";
 };
 
 const artifacts: Artifact[] = [
@@ -151,6 +151,21 @@ const artifacts: Artifact[] = [
     lost: "Manuals, ownership, and the thrill of carrying code home",
     visual: "software-box",
   },
+  {
+    id: "framework-welcome",
+    index: "010",
+    name: "The Framework Welcome Screen",
+    years: "2005—2025",
+    category: "Interface",
+    status: "Extinct",
+    epitaph: "The server was alive. That used to be enough.",
+    description:
+      "Before your app had a name, it had the framework's name. Rails welcomed you aboard; React spun patiently on a dark screen. AI bootstrapping killed the intermission: the first page you see is already trying to be your product.",
+    replacedBy: "A prompt that generates the first real screen",
+    gained: "A working product on the first run",
+    lost: "The tiny shared ceremony of seeing the framework wake up",
+    visual: "framework-welcome",
+  },
 ];
 
 const filters = ["All", "Object", "Interface", "Ritual"] as const;
@@ -234,6 +249,35 @@ function ArtifactVisual({ type }: { type: Artifact["visual"] }) {
             loading="lazy"
           />
         </figure>
+      )}
+      {type === "framework-welcome" && (
+        <div className="framework-welcome">
+          <div className="starter-window starter-window--rails">
+            <div className="starter-toolbar">
+              <i /><i /><i />
+              <span>localhost:3000</span>
+            </div>
+            <div className="rails-welcome">
+              <b>RAILS</b>
+              <strong>Welcome aboard</strong>
+              <span>You're riding Ruby on Rails!</span>
+              <small>About your application's environment</small>
+            </div>
+          </div>
+          <div className="starter-window starter-window--react">
+            <div className="starter-toolbar">
+              <i /><i /><i />
+              <span>localhost:3000</span>
+            </div>
+            <div className="react-welcome">
+              <div className="react-mark">
+                <i /><i /><i /><em />
+              </div>
+              <span>Edit <b>src/App.js</b> and save to reload.</span>
+              <small>Learn React</small>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
